@@ -20,7 +20,6 @@ export default function Input() {
       const formData = new FormData();
       formData.append("detail", detail);
       formData.append("pdf", pdf);
-      console.log(pdf)
       const res = await axios.post("http://localhost:3000", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
