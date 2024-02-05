@@ -30,8 +30,8 @@ app.post("/", upload.single('pdf'), async (req, res) => {
     if (detail!==null && pdfBuffer!=null) {
         const pdfData = await pdfParse(pdfBuffer);
         const pdfText = pdfData.text;
-          let data = await gemini(detail, applicantResume = pdfText);
-      return res.json({ data });
+        let data = await gemini(detail, applicantResume = pdfText);
+        return res.json({ data });
     } else {
       res.status(400).json({ error: 'Invalid data' });
     }
