@@ -12,7 +12,6 @@ export default function Input() {
       setPdf(selectedPdf);
     }
   }
-
   async function submit(event) {
     event.preventDefault();
 
