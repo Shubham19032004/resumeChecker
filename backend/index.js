@@ -21,7 +21,6 @@ const upload = multer({
     }
   }
 });
-
 app.post("/", upload.single('pdf'), async (req, res) => {
   try {
     const { detail } = req.body;
